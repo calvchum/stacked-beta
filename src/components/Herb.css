@@ -1,0 +1,15 @@
+.herb-picture {
+  height: 150px;
+  background-position: center;
+  background-size: cover;
+}
+
+.herb-title {
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.herb {
+  flex-basis: calc(50% - 30px);
+  margin: 15px;
+}
