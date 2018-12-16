@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Herb from './components/Herb';
 import sampleHerbs from './sample-herbs.js'
 import AddHerbForm from './components/AddHerbForm';
+import base from '../base';
 
 class App extends Component {
   state = {
     herbs: sampleHerbs,
+  }
+
+  componentDidMount() {
+    this.ref = base.syncState('/'), {
+      context: this,
+      state: 'herbs'
+    }
   }
 
   addHerb = herb => {

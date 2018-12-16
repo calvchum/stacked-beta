@@ -4,7 +4,7 @@ import {formatPrice} from '../helpers';
 
 class Herb extends React.Component {
   render(){
-    const { details, index } = this.props;
+    const { details } = this.props;
     const title = formatPrice(details.price) + " - " + details.name
 
     const style = {
