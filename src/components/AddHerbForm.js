@@ -14,13 +14,16 @@ class AddHerbForm extends React.Component {
   }
   render(){
     return (
-      <form ref={(input) => this.herbForm = input} className="herb-edit" onSubmit={(e) => this.createHerb(e)}>
-        <input ref={(input) => this.name = input} type="text" placeholder="Herb Name"/>
-        <input ref={(input) => this.price = input} type="text" placeholder="Price"/>
-        <input ref={(input) => this.image = input} type="text" placeholder="Herb Image"/>
-        <textarea ref={(input) => this.desc = input} type="text" placeholder="Herb Desc" cols="60" rows="20"></textarea>
-        <button type="submit">+ Add Herb</button>
-      </form>
+      <div>
+        <form ref={(input) => this.herbForm = input} className="herb-edit" onSubmit={(e) => this.createHerb(e)}>
+          <input ref={(input) => this.name = input} type="text" placeholder="Herb Name"/>
+          <input ref={(input) => this.price = input} type="text" placeholder="Price"/>
+          <input ref={(input) => this.image = input} type="text" placeholder="Herb Image"/>
+          <textarea ref={(input) => this.desc = input} type="text" placeholder="Herb Desc" cols="60" rows="20"></textarea>
+          <button type="submit">+ Add Herb</button>
+        </form>
+        <button onClick={this.props.loadSamples}>Load Sample Herbs</button>
+      </div>
     )
   }
 }

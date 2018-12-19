@@ -29,10 +29,4 @@ module.exports = {
     price: 2368,
     desc: 'Suntheanine is the premier, patented form of the amino acid L-theanine. Suntheanine is the purest form of L-theanine on the market today.'    
   },
-  herb6: {
-    name: 'L-Theanine',
-    image: 'https://s3.images-iherb.com/drb/drb00197/v/43.jpg',
-    price: 2368,
-    desc: 'Suntheanine is the premier, patented form of the amino acid L-theanine. Suntheanine is the purest form of L-theanine on the market today.'    
-  }
 };
