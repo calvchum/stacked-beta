@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './AddHerbForm.css';
 
 class AddHerbForm extends React.Component {
   createHerb(event) {

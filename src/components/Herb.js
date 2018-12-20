@@ -16,8 +16,9 @@ class Herb extends React.Component {
       <div className="herb">
         <div className="herb-picture" style={style}></div>
         <div className="herb-title">{title}</div>
-        <div className="herb-desc">{details.desc} {index}</div>
-        <button onClick={() => this.props.deleteHerb(index)}>Delete herb</button>
+        <div className="herb-desc">{details.desc}</div>
+        <button onClick={() => this.props.addToStack(index)}>Add to stack</button>
+        <button onClick={() => {if(window.confirm('Are you sure you wish to delete this item?')) this.props.deleteHerb(index) } }>Delete herb</button>
       </div>
     )
   }

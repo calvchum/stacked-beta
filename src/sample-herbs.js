@@ -1,5 +1,5 @@
 module.exports = {
-  herb1: {
+  herb19: {
     name: 'Ashwaganda',
     image: 'https://s3.images-iherb.com/now/now04603/v/25.jpg',
     price: 1430,
@@ -29,4 +29,34 @@ module.exports = {
     price: 2368,
     desc: 'Suntheanine is the premier, patented form of the amino acid L-theanine. Suntheanine is the purest form of L-theanine on the market today.'    
   },
+  herb6: {
+    name:'Dopa Macuna',
+    image:'https://s3.images-iherb.com/now/now03092/v/7.jpg',
+    price: 1686,
+    desc: 'Dopamine is a neurotransmitter that promotes enjoyment and interest in life. With 15% L-Dopa (the immediate precursor of dopamine), NOW Dopa Mucuna helps the body with what it needs to make this important neurotransmitter. Mucuna has been used in the traditional Ayurvedic system in India for thousands of years.'
+  },
+  herb7: {
+    name:'N-Acetyl L-Tyrosine',
+    image:'https://s3.images-iherb.com/sns/sns00217/v/4.jpg',
+    price: 3052,
+    desc: 'N-Acetyl L-Tyrosine is a more rapidly absorbed and bioavailable form of the amino acid L-tyrosine, and is less prone to urinary excretion. L-Tyrosine is converted in the body to key biologic compounds, including epinephrine, dopamine, L-dopa, CoQ10, thyroid hormones, and melanin. The B vitamins pyridoxine (B-6) and folic acid are provided to assist in the conversion process.'
+  },
+  herb8: {
+    name:'Black Pepper Fruit Extract',
+    image:'https://s3.images-iherb.com/sns/sns00644/v/3.jpg',
+    price: 1181,
+    desc: "BioPerine is a pure form of piperine, derived from the fruits of black pepper. Studies indicate that BioPerine promotes nutrient absorption. This is due to BioPerine's interaction with the surface of the intestinal tract. BioPerine is non-irritating to the gastrointestinal tract."
+  },
+  herb9: {
+    name:'Brain Elevate',
+    image:'https://s3.images-iherb.com/sns/sns00644/v/3.jpg',
+    price: 3374,
+    desc: "NOW Brain Elevate is scientifically formulated to support healthy cerebral functions. Brain Elevate features Ginkgo biloba and RoseOx, two plant extracts known for their free radical scavenging properties. This product is also formulated with Phosphatidyl Serine, L-Glutamine, and Choline as critical brain nutrients to promote optimal results."
+  },
+  herb18: {
+    name:'Vitamin D3',
+    image:'https://s3.images-iherb.com/now/now00373/v/7.jpg',
+    price: 1941,
+    desc: "NOW Vitamin D-3 softgels supply this key vitamin in a highly-absorbable liquid softgel form. Vitamin D is normally obtained from the diet or produced by the skin from the ultraviolet energy of the sun. However, it is not abundant in food. As more people avoid sun exposure, Vitamin D supplementation becomes even more necessary to ensure that your body receives an adequate supply."
+  }
 };
