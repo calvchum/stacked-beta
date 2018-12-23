@@ -13,21 +13,36 @@ class Stack extends React.Component {
     }
 
     const unit = herb.unit 
+    const style = {
+      backgroundImage: `url('${herb.image}')`,
+    };
 
     return (
-      <div key={key}>
-        <li>
-           {herb.name} {count}{unit} {removeButton}
-        </li>
-      </div>
+        <tr key={key}>
+          <th style={style} className="stack-table-image"></th>
+          <th>{herb.name}</th>
+          <td>{count}{unit}{removeButton}</td>
+        </tr>        
     )
   }
 	render(){
     const stackId = Object.keys(this.props.stack);
+
 		return(
       <div>
       <h1>my stack</h1>
-        {stackId.map(this.renderStack)}
+        <table className="stack-table">
+          <thead>
+            <tr>
+             <th>Image</th>
+              <th>Name</th>
+              <th>Dosage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {stackId.map(this.renderStack)}
+          </tbody>
+        </table>
       </div>
 		)
 	}

@@ -1,0 +1,10 @@
+.stack-table th {
+	text-align: left;
+}
+
+.stack-table-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 75px;
+}
