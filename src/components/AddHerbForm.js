@@ -6,8 +6,10 @@ class AddHerbForm extends React.Component {
     event.preventDefault();
     const herb = {
       name: this.name.value,
-      price: this.price.value,
+      price: parseFloat(this.price.value),
       image: this.image.value,
+      dose: this.dose.value,
+      unit: this.unit.value,
       desc: this.desc.value,
     }
     this.props.addHerb(herb);
@@ -18,6 +20,11 @@ class AddHerbForm extends React.Component {
       <div>
         <form ref={(input) => this.herbForm = input} className="herb-edit" onSubmit={(e) => this.createHerb(e)}>
           <input ref={(input) => this.name = input} type="text" placeholder="Herb Name"/>
+          <input type="text" ref={(input) => this.dose = input} type="text" placeholder="Enter dose"/>
+          <select ref={(input) => this.unit = input } name="unit">
+            <option value="mg">mg</option>
+            <option value="IU">IU</option>
+          </select>
           <input ref={(input) => this.price = input} type="text" placeholder="Price"/>
           <input ref={(input) => this.image = input} type="text" placeholder="Herb Image"/>
           <textarea ref={(input) => this.desc = input} type="text" placeholder="Herb Desc" cols="60" rows="20"></textarea>

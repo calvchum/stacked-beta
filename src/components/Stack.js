@@ -12,10 +12,12 @@ class Stack extends React.Component {
       return <li key={key}>Sorry, {herb ? herb.name : 'herb'} is no longer available! {removeButton}</li>
     }
 
+    const unit = herb.unit 
+
     return (
       <div key={key}>
         <li>
-           {herb.name} {count} {removeButton}
+           {herb.name} {count}{unit} {removeButton}
         </li>
       </div>
     )
@@ -24,6 +26,7 @@ class Stack extends React.Component {
     const stackId = Object.keys(this.props.stack);
 		return(
       <div>
+      <h1>my stack</h1>
         {stackId.map(this.renderStack)}
       </div>
 		)

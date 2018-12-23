@@ -1,7 +1,8 @@
 .herb-picture {
-  height: 150px;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 150px;
 }
 
 .herb-title {

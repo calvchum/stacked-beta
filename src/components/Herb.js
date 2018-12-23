@@ -9,7 +9,8 @@ class Herb extends React.Component {
     const title = formatPrice(details.price) + " - " + details.name
 
     const style = {
-      backgroundImage: `url('${details.image}')`
+      backgroundImage: `url('${details.image}')`,
+
     };
 
     return (

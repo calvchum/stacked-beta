@@ -54,9 +54,11 @@ class App extends Component {
   }
 
   addToStack(key) {
-    console.log(`${key} added to stack`);
+    const details = this.state.herbs[key];
+    const dosage = details.dose + details.unit;
+    console.log(`${key} added to stack has a dose of ${dosage}`);
     const stack = {...this.state.stack};
-    stack[key] = stack[key] + 1 || 1;
+    stack[key] = stack[key] + parseFloat(details.dose) || parseFloat(details.dose);
     this.setState({ stack });
   }
 
@@ -76,6 +78,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Stack 
+          herbs={this.state.herbs}
+          stack={this.state.stack}
+          removeFromStack={this.removeFromStack}
+         />
         <Navbar/>
         <div className="app">
           <div className="main">
@@ -91,11 +98,6 @@ class App extends Component {
           </div>
           <div className="map">
           <AddHerbForm loadSamples={this.loadSamples} addHerb={this.addHerb}/>
-          <Stack 
-            herbs={this.state.herbs}
-            stack={this.state.stack}
-            removeFromStack={this.removeFromStack}
-           />
           </div>
         </div>
       </div>
