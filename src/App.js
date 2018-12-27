@@ -21,6 +21,7 @@ class App extends Component {
   state = {
     herbs: {},
     stack: {},
+    ayuverdic: {},
   }
 
   componentDidMount() {
@@ -33,7 +34,17 @@ class App extends Component {
     context: this,
     state: 'stack'
     });
+
+    fetch('http://localhost:5000/adaptogen')
+      .then(res => res.json())
+      .then(data => console.log(data))
+
+    fetch('http://localhost:5000/ayuverdic')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  
   }
+
 
   componentWillUnmount() {
     base.removeBinding(this.stackRef);
