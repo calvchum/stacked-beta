@@ -19,9 +19,10 @@ class Stack extends React.Component {
 
     return (
         <tr key={key}>
-          <th style={style} className="stack-table-image"></th>
-          <th>{herb.name}</th>
+          <td style={style} className="row-image-style"></td>
+          <td className="stack-table-name">{herb.name}</td>
           <td>{count}{unit}{removeButton}</td>
+          <td>{herb.desc}</td>
         </tr>        
     )
   }
@@ -34,9 +35,10 @@ class Stack extends React.Component {
         <table className="stack-table">
           <thead>
             <tr>
-             <th>Image</th>
-              <th>Name</th>
-              <th>Dosage</th>
+             <th className="row-image">Image</th>
+              <th className="row-name">Name</th>
+              <th className="row-dosage">Dosage</th>
+              <th classaName="row-desc">Description</th>
             </tr>
           </thead>
           <tbody>
