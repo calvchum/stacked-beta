@@ -1,0 +1,37 @@
+.stack-table {
+  padding: 100px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.stack-table th {
+	text-align: left;
+}
+
+.stack-table td {
+  overflow: auto;
+}
+
+.row-image-style {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 125px;
+}
+
+.row-image {
+  width: 20%;
+}
+
+.row-name {
+  width: 10%;
+}
+
+.row-dosage {
+  width: 10%;
+}
+
+.row-desc {
+  width: 50%;
+  margin-left: 10px;
+}
