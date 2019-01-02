@@ -21,7 +21,6 @@ class App extends Component {
   state = {
     herbs: {},
     stack: {},
-    ayuverdic: {},
   }
 
   componentDidMount() {
@@ -37,11 +36,11 @@ class App extends Component {
 
     fetch('http://localhost:5000/adaptogen')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => this.addToDatabase(data))
 
     fetch('http://localhost:5000/ayuverdic')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(data => this.addToDatabase(data))
   
   }
 
@@ -49,6 +48,13 @@ class App extends Component {
   componentWillUnmount() {
     base.removeBinding(this.stackRef);
     base.removeBinding(this.herbsRef);
+  }
+
+  addToDatabase = key => {
+    const data = {...this.state.data}
+    const dataKey = Object.keys(key)
+    data[dataKey] = key[dataKey];
+    this.setState({data});
   }
 
   addHerb = herb => {
