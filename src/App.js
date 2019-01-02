@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Herb from './components/Herb';
 import Stack from './components/Stack';
+import ListHerbs from './components/ListHerbs';
 import sampleHerbs from './sample-herbs.js'
 import AddHerbForm from './components/AddHerbForm';
 import Navbar from './components/Navbar';
@@ -21,6 +22,8 @@ class App extends Component {
   state = {
     herbs: {},
     stack: {},
+    search: 'test',
+    data: {},
   }
 
   componentDidMount() {
@@ -92,6 +95,11 @@ class App extends Component {
     });
   }
 
+  searchResults = input => {
+    const search = {...this.state.search},
+    
+  }
+
   render() {
     return (
       <div>
@@ -101,6 +109,9 @@ class App extends Component {
           removeFromStack={this.removeFromStack}
          />
         <Navbar/>
+        <ListHerbs
+          data={this.state.data}
+          />
         <div className="app">
           <div className="main">
             <div className="search">

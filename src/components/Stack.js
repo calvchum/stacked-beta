@@ -38,7 +38,7 @@ class Stack extends React.Component {
              <th className="row-image">Image</th>
               <th className="row-name">Name</th>
               <th className="row-dosage">Dosage</th>
-              <th classaName="row-desc">Description</th>
+              <th className="row-desc">Description</th>
             </tr>
           </thead>
           <tbody>

@@ -20,7 +20,7 @@ class AddHerbForm extends React.Component {
       <div>
         <form ref={(input) => this.herbForm = input} className="herb-edit" onSubmit={(e) => this.createHerb(e)}>
           <input ref={(input) => this.name = input} type="text" placeholder="Herb Name"/>
-          <input type="text" ref={(input) => this.dose = input} type="text" placeholder="Enter dose"/>
+          <input type="text" ref={(input) => this.dose = input} placeholder="Enter dose"/>
           <select ref={(input) => this.unit = input } name="unit">
             <option value="mg">mg</option>
             <option value="IU">IU</option>

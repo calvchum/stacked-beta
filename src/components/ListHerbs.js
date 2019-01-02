@@ -19,9 +19,11 @@ class ListHerbs extends React.Component {
   }
 
   render() {
-    const dataId = Object.keys(this.props.data);
+    const dataId = Object.keys(this.props.data)
+
     return (
       <div>
+        <input type="text" className="searchbar" value={(search) => {this.searchResults(search)}}/>
         <ul>
           {dataId.map(this.renderList)}
         </ul>
