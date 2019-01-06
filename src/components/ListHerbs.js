@@ -2,6 +2,11 @@ import React from 'react'
 
 class ListHerbs extends React.Component {
 
+  handleChange = e => {
+    const search = e.target.value;
+    this.props.updateSearch(search);
+  }
+
   renderList = key => {
     const dataItems = this.props.data[key].items
     
@@ -23,7 +28,7 @@ class ListHerbs extends React.Component {
 
     return (
       <div>
-        <input type="text" className="searchbar" value={(search) => {this.searchResults(search)}}/>
+        <input type="text" className="searchbar" placeholder="Search..." onChange={(e) => this.handleChange(e)} defaultValue=''/>
         <ul>
           {dataId.map(this.renderList)}
         </ul>

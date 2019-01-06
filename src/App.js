@@ -16,13 +16,14 @@ class App extends Component {
     this.deleteHerb = this.deleteHerb.bind(this);
     this.addToStack = this.addToStack.bind(this);
     this.removeFromStack = this.removeFromStack.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
   }
 
 
   state = {
     herbs: {},
     stack: {},
-    search: 'test',
+    search: '',
     data: {},
   }
 
@@ -44,7 +45,11 @@ class App extends Component {
     fetch('http://localhost:5000/ayuverdic')
       .then(res => res.json())
       .then(data => this.addToDatabase(data))
-  
+  }
+
+  updateSearch = input => {
+    const search = {...this.state.search}
+    this.setState({ search: input })
   }
 
 
@@ -96,7 +101,7 @@ class App extends Component {
   }
 
   searchResults = input => {
-    const search = {...this.state.search},
+    // const search = {...this.state.search},
     
   }
 
@@ -111,6 +116,7 @@ class App extends Component {
         <Navbar/>
         <ListHerbs
           data={this.state.data}
+          updateSearch={this.updateSearch}
           />
         <div className="app">
           <div className="main">
