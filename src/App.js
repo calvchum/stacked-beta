@@ -117,6 +117,7 @@ class App extends Component {
         <ListHerbs
           data={this.state.data}
           updateSearch={this.updateSearch}
+          search={this.state.search}
           />
         <div className="app">
           <div className="main">

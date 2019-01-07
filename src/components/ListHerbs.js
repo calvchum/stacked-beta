@@ -9,18 +9,21 @@ class ListHerbs extends React.Component {
 
   renderList = key => {
     const dataItems = this.props.data[key].items
-    
-    return (
-      <ul key={key}>
-        {dataItems.map((e, index)=>{
-          return <li key={index}>{e.price} - {e.title}</li>          
-        })}
-      </ul>
-    )
-    
+    const filteredItems = dataItems.filter(
+        (product) => {
+          return product.title.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
+        }
+      );
 
-    // return(
-    //   <p>hi</p>)
+    if (this.props.search !== '') {
+      return (
+        <ul key={key}>
+          {filteredItems.map((e, index)=>{
+            return <li key={index}>{e.price} - {e.title}</li>          
+          })}
+        </ul>
+      )
+    }
   }
 
   render() {
