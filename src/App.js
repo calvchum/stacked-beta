@@ -88,8 +88,11 @@ class App extends Component {
     this.setState({ stack });
   }
 
-  addToStackDB(key, object) {
-    console.log(object.title)
+  addToStackDB(type, index, object) {
+    const key = `${type}${index}`
+    const stack = {...this.state.stack}; //make a copy of the state
+    stack[key] = stack[key] + 1 || 1;
+    this.setState({ stack });
   }
 
   removeFromStack = key => {

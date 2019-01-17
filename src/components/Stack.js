@@ -29,6 +29,7 @@ class Stack extends React.Component {
 	render(){
     const stackId = Object.keys(this.props.stack);
 
+
 		return(
       <div>
       <h1>my stack</h1>

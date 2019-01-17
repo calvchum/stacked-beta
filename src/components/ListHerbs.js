@@ -20,8 +20,8 @@ class ListHerbs extends React.Component {
         <ul key={type}>
           {filteredItems.map((e, index)=>{
             const itemIndex = index
-            const itemKey = `${type}${index}`
-            const button = <button onClick={ () => this.props.addToStackDB(itemKey, dataItems[index])}>Add to stack</button>
+            const itemKey = `${type}${index}` // break this up and send type and index 
+            const button = <button onClick={ () => this.props.addToStackDB(type, index, dataItems[index])}>Add to stack</button>
             return <li key={index}>{e.price} - {e.title} {button} {type} {index}</li>          
           })}
         </ul>
