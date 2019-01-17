@@ -7,8 +7,8 @@ class ListHerbs extends React.Component {
     this.props.updateSearch(search);
   }
 
-  renderList = key => {
-    const dataItems = this.props.data[key].items
+  renderList = type => {
+    const dataItems = this.props.data[type].items
     const filteredItems = dataItems.filter(
         (product) => {
           return product.title.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
@@ -17,9 +17,12 @@ class ListHerbs extends React.Component {
 
     if (this.props.search !== '') {
       return (
-        <ul key={key}>
+        <ul key={type}>
           {filteredItems.map((e, index)=>{
-            return <li key={index}>{e.price} - {e.title}</li>          
+            const itemIndex = index
+            const itemKey = `${type}${index}`
+            const button = <button onClick={ () => this.props.addToStackDB(itemKey, dataItems[index])}>Add to stack</button>
+            return <li key={index}>{e.price} - {e.title} {button} {type} {index}</li>          
           })}
         </ul>
       )

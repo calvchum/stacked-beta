@@ -15,6 +15,7 @@ class App extends Component {
     this.loadSamples = this.loadSamples.bind(this);
     this.deleteHerb = this.deleteHerb.bind(this);
     this.addToStack = this.addToStack.bind(this);
+    this.addToStackDB = this.addToStackDB.bind(this);
     this.removeFromStack = this.removeFromStack.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
   }
@@ -87,6 +88,10 @@ class App extends Component {
     this.setState({ stack });
   }
 
+  addToStackDB(key, object) {
+    console.log(object.title)
+  }
+
   removeFromStack = key => {
     const stack = {...this.state.stack};
     stack[key] = null;
@@ -118,6 +123,7 @@ class App extends Component {
           data={this.state.data}
           updateSearch={this.updateSearch}
           search={this.state.search}
+          addToStackDB={this.addToStackDB}
           />
         <div className="app">
           <div className="main">
