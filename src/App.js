@@ -91,7 +91,7 @@ class App extends Component {
   addToStackDB(type, index, object) {
     const key = `${type}${index}`
     const stack = {...this.state.stack}; //make a copy of the state
-    stack[key] = stack[key] + 1 || 1;
+    stack[key] = object;
     this.setState({ stack });
   }
 
